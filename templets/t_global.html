@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/2019/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>营业统计分析</title>
+<style type="text/css">
+*{
+font:normal 12px 宋体;
+}
+table{
+border-collapse:collapse;
+border:1px solid #000;
+}
+tr{
+height:27px;
+}
+.bold{
+font-weight:bold;
+}
+</style>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="3">
+  <tr>
+   <td colspan="4" style="font:bold 25px 黑体;text-align:center;text-spacing:20px;">
+   <?php echo $report_title; ?>   </td>
+  </tr>
+  <tr>
+    <td colspan="2">统计时间:<?php echo $sday?>至<?php echo $eday?> </td>
+    <td colspan="2">当前时间:<?php echo GetDatetimeMK(time())?> </td>
+  </tr>
+  <tr>
+    <td colspan="4" class="bold" style="border-bottom:1px solid #000">采购情况</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>采购单数:<?php echo $total_d;?></td>
+    <td>退货单数:<?php echo $total_b;?></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>采购数量:<?php echo $totalnumber_in;?></td>
+    <td>采购金额:￥<?php echo number_format($totalmoney_in,2,'.',',');?></td>
+    <td>退货数量:<?php echo $totalnumber_back;?></td>
+    <td>退货金额:￥<?php echo number_format($totalmoney_back,2,'.',',');?></td>
+  </tr>
+  <tr>
+    <td>合计</td>
+    <td>总数量:<?php echo ($totalnumber_in-$totalnumber_back);?></td>
+    <td>总金额:￥<?php echo number_format(($totalmoney_in-$totalmoney_back),2,'.',',');?></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="4" class="bold" style="border-bottom:1px solid #000">销售情况</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>销售单数:<?php echo $total_s?></td>
+    <td>退货单数:<?php echo $total_sb?></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>销售数量:<?php echo $totalnumber_s;?></td>
+    <td>销售金额:￥<?php echo number_format($totalmoney_s,2,'.',',');?></td>
+    <td>退货数量:<?php echo $totalnumber_s;?></td>
+    <td>退货金额:￥<?php echo number_format($totalmoney_sb,2,'.',',');?></td>
+  </tr>
+  <tr>
+    <td>合计</td>
+    <td>总数量:<?php echo ($totalnumber_s-$totalnumber_sb);?></td>
+    <td>总金额:￥<?php echo number_format(($totalmoney_s-$totalmoney_sb),2,'.',',');?></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="4" class="bold" style="border-bottom:1px solid #000">库存调拨情况</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>单据总数:</td>
+    <td>调入数量:</td>
+    <td>调出数量:</td>
+  </tr>
+  <tr>
+    <td colspan="4" class="bold" style="border-bottom:1px solid #000">报损情况</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>报损单数:</td>
+    <td>报损数量:</td>
+    <td>报损金额:</td>
+  </tr>
+  <tr>
+    <td class="bold">库存情况</td>
+    <td>库存总量:<?php echo $totalnumber_kc;?></td>
+    <td>库存总价:￥<?php echo number_format($totalmoney_kc,2,'.',',');?></td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td class="bold">付款收款情况</td>
+    <td>向供应商付款单数:</td>
+    <td>向客户收款单数:</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>应付供应商:</td>
+    <td>实付供应商:</td>
+    <td>应收客户:</td>
+    <td>实收客户:</td>
+  </tr> 
+  <tr>
+    <td class="bold">财务分析:</td>
+    <td>销售成本:￥<?php echo number_format(($totalmoney_cb-$totalmoney_sb_cb),2,'.',',');?></td>
+    <td>销售利润:￥<?php echo number_format(($totalmoney_s-$totalmoney_sb)-($totalmoney_cb-$totalmoney_sb_cb),2,'.',',');?></td>
+    <td>销售毛利率:<?php echo number_format((($totalmoney_s-$totalmoney_sb)-($totalmoney_cb-$totalmoney_sb_cb))/($totalmoney_s-$totalmoney_sb)*100,2,'.',',');?>%</td>
+  </tr>  
+</table>
+
+</body>
+</html>

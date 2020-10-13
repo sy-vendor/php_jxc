@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/2019/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>业务员对帐单</title>
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr height="50">
+    <td colspan="3" style="font:bold 25px 黑体;text-align:center;text-spacing:20px;"><?php echo $report_title; ?></td>
+  </tr>
+  <tr height="30">
+    <td>&nbsp;打印日期:<?php echo $p_date;?>&nbsp;&nbsp;操作员:<?php echo $p_name;?></td>
+    <td>&nbsp;</td>
+    <td>业务员:<?php echo $worker;?><br>公司:<?php echo $cfg_webname;?>&nbsp;电话:<?php echo $cfg_phone;?></td>
+  </tr>
+  <tr height="27">
+    <td colspan="3"><?php //echo $p_rtitle;?></td>
+  </tr>
+  <tr>
+    <td colspan="3"><?php echo $p_string;?></td>
+  </tr>
+  <tr height="27">
+    <td colspan="3">&nbsp;<?php echo $p_pagestring;?></td>
+  </tr>
+  <tr height="27">
+    <td colspan="3" align="right"><b>Powered By www.suyi1995.com(ERP SYSTEM)</b>&nbsp;&nbsp;</td>
+  </tr>  
+</table>
+</body>
+</html>
