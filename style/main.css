@@ -1,0 +1,111 @@
+//main css
+*{
+padding:0px;
+margin:0px;
+}
+body{
+background-color:#c6dbef;
+font:normal 12px Verdana, Arial, Helvetica, sans-serif;
+}
+A:link,A:visited{
+font:normal 12px Verdana, Arial, Helvetica, sans-serif;
+color:#000000;
+text-decoration:none;
+}
+A:hover{
+font:normal 12px Verdana, Arial, Helvetica, sans-serif;
+color:#000099;
+text-decoration:none;
+}
+#table_style{
+width:10px;
+height:10px;
+}
+#table_style_all{
+background-color:#AECFEF;
+border:0px;
+}
+#table_border{
+border:1px solid #AECFEF;
+}
+#table_border td{
+height:26px;
+border-bottom:1px solid #DCE7F0;
+}
+.cellcolor{
+text-align:left;
+background-color:#EBF1F6;
+padding:0 0 0 5px;
+}
+.l_t{
+background:url(../images/table_l_t.gif) no-repeat left top;
+}
+.l_b{
+background:url(../images/table_l_b.gif) no-repeat left bottom;
+}
+.r_t{
+background:url(../images/table_r_t.gif) no-repeat right top;
+}
+.r_b{
+background:url(../images/table_r_b.gif) no-repeat right bottom;
+}
+#row_style{
+background-color:#EBF1F6;
+text-align:center;
+}
+.row_color_head{
+background-color:#96bde2;
+height:30px;
+text-align:center;
+font-weight:bold;
+}
+.row1_color_head{
+background-color:#EBF1F6;
+height:27px;
+text-align:left;
+font-weight:normal;
+}
+.row_color_gray{
+background-color:#EBF1F6;
+height:30px;
+}
+.row_color_normal{
+background-color:#FFFFFF;
+height:30px;
+}
+#copyright{
+height:30px;
+text-align:center;
+font:normal Verdana, Arial, Helvetica, sans-serif 12px;
+padding-top:10px;
+line-height:150%;
+}
+#need{
+background-color:#f8f2e8;
+}
+/*分页属性*/
+.pagelistbox{
+text-align:right;
+margin:auto;
+padding:0px 20px;
+height:20px;
+float:right;
+}
+.pagelistbox a{
+border:1px solid #ECECEC;
+padding:2px;
+}
+/*分页属性*/
+#report_table{
+border-collapse:collapse;
+border-color:#333333;
+border-spacing:0px;
+}
+#report_table .row_report_head{
+text-align:center;
+font:bold 12px "宋体";
+height:30px;
+}
+#report_table tr{
+height:25px;
+}
