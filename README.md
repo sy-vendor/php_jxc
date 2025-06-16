@@ -43,8 +43,8 @@
 
 ## 技术支持
 
-如有问题请联系：www.suyi1995.com
+如有问题请联系：[www.suyi1995.com](https://github.com/sy-vendor)
 
 ## 版权信息
 
-本系统由 www.suyi1995.com 提供技术支持
+本系统由 [www.suyi1995.com](https://github.com/sy-vendor) 提供技术支持
